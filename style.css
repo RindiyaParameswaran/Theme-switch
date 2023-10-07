@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1b9c9c;
+}
+body.active {
+    background: #fffbcf;
+}
+.toggle {
+    position: relative;
+    height: 120px;
+    width: 240px;
+    cursor: pointer;
+    border-radius: 120px;
+    background: #d14add;
+    transition: 0.5s;
+    box-shadow: inset 0 8px 60px rgba(153, 20, 20, 0.1), inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+.toggle__indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transform: scale(80%);
+    background: #8651a5;
+    transition: 0.5s;
+}
+.toggle.active {
+    background: #fffbcf;
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1), inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.05);
+}
+.toggle.active .toggle__indicator {
+    left: 120px;
+    background: #f08a5d;
+}
+.toggle__indicator {
+    background: linear-gradient(to bottom, #d16f8a, #b83b5e);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 4px 4px rgba(255, 255, 255, 0.4), inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+    transform: scale(90%);
+}
+.toggle.active .toggle__indicator {
+    background: linear-gradient(to bottom, #f29b74, #f08a5d);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), inset 0 4px 4px rgba(255, 255, 255, 0.8), inset 0 -4px 4px rgba(255, 255, 255, 0.5);
+}
